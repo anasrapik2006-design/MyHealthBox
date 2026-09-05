@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyHealthBox</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h2>🏥 MyHealthBox</h2>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="health.html">My Health</a>
+
+            <a href="Report.html">Reports</a>
+
+            <a href="medicine.html">Medicines</a>
+
+            <a href="reminder.html">Reminders</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <h1>Your Personal Health Space</h1>
+
+            <p>
+                Keep your health information, medical reports,
+                medicines and reminders in one place.
+            </p>
+
+            <a href="health.html">
+
+                <button type="button">
+                    Get Started
+                </button>
+
+            </a>
+
+        </section>
+
+
+
+        <!-- DASHBOARD -->
+
+        <section class="dashboard-section">
+
+            <div class="dashboard-heading">
+
+                <h2>📊 My Health Dashboard</h2>
+
+                <p>
+                    Quick overview of your health information.
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-cards">
+
+
+                <!-- HEALTH -->
+
+                <a href="health.html" class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <h3>Health</h3>
+
+                        <strong id="healthStatus">
+                            Not Added
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- REPORTS -->
+
+                <a href="Report.html" class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        🧪
+                    </div>
+
+                    <div>
+
+                        <h3>Reports</h3>
+
+                        <strong id="reportCount">
+                            0
+                        </strong>
+
+                        <span> Reports</span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- MEDICINES -->
+
+                <a href="medicine.html" class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        💊
+                    </div>
+
+                    <div>
+
+                        <h3>Medicines</h3>
+
+                        <strong id="medicineCount">
+                            0
+                        </strong>
+
+                        <span> Medicines</span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- REMINDERS -->
+
+                <a href="reminder.html" class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        🔔
+                    </div>
+
+                    <div>
+
+                        <h3>Reminders</h3>
+
+                        <strong id="reminderCount">
+                            0
+                        </strong>
+
+                        <span> Reminders</span>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- UPCOMING REMINDERS -->
+
+            <div class="upcoming-reminders">
+
+                <div class="upcoming-heading">
+
+                    <h2>🔔 Upcoming Reminders</h2>
+
+                    <a href="reminder.html">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div id="upcomingRemindersContainer">
+
+                    <p class="no-upcoming-reminders">
+                        No upcoming reminders.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>© 2026 MyHealthBox</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reminders - MyHealthBox</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h2>🏥 MyHealthBox</h2>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="health.html">
+                My Health
+            </a>
+
+            <a href="Report.html">
+                Reports
+            </a>
+
+            <a href="medicine.html">
+                Medicines
+            </a>
+
+            <a href="reminder.html">
+                Reminders
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main>
+
+        <section class="page-section">
+
+
+            <div class="page-heading">
+
+                <h1>🔔 My Reminders</h1>
+
+                <p>
+                    Never forget your important health reminders.
+                </p>
+
+            </div>
+
+
+
+            <!-- REMINDER FORM -->
+
+            <div class="form-card">
+
+                <h2>Add Reminder</h2>
+
+
+                <form id="reminderForm">
+
+
+                    <label for="reminderTitle">
+                        Reminder Title
+                    </label>
+
+                    <input type="text" id="reminderTitle" placeholder="Example: Take Medicine">
+
+
+
+                    <label for="reminderType">
+                        Reminder Type
+                    </label>
+
+                    <select id="reminderType">
+
+                        <option value="">
+                            Select Type
+                        </option>
+
+                        <option value="Medicine">
+                            Medicine
+                        </option>
+
+                        <option value="Doctor Appointment">
+                            Doctor Appointment
+                        </option>
+
+                        <option value="Health Checkup">
+                            Health Checkup
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+
+
+                    <label for="reminderDate">
+                        Date
+                    </label>
+
+                    <input type="date" id="reminderDate">
+
+
+
+                    <label for="reminderTime">
+                        Time
+                    </label>
+
+                    <input type="time" id="reminderTime">
+
+
+
+                    <button type="button" id="reminderSubmitBtn" onclick="handleReminderSubmit()">
+                        Add Reminder
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- REMINDER LIST -->
+
+            <div class="list-section">
+
+                <h2>🔔 Your Reminders</h2>
+
+
+                <div id="remindersContainer">
+
+                    <p class="no-data">
+                        No reminders added yet.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 MyHealthBox
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

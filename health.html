@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Health - MyHealthBox</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <h2>🏥 MyHealthBox</h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="health.html">My Health</a>
+            <a href="Report.html">Reports</a>
+            <a href="medicine.html">Medicines</a>
+            <a href="reminder.html">Reminders</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main -->
+
+    <main>
+
+        <section class="health-section">
+
+            <div class="health-heading">
+
+                <h1>👤 My Health</h1>
+
+                <p>
+                    Manage your personal health information
+                    in one simple place.
+                </p>
+
+            </div>
+
+
+            <!-- Health Form -->
+
+            <div class="health-card" id="healthForm">
+
+                <div class="form-group">
+
+                    <label>Full Name</label>
+
+                    <input type="text" id="fullName" placeholder="Enter your full name">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Age</label>
+
+                    <input type="number" id="age" placeholder="Enter your age">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Blood Group</label>
+
+                    <select id="bloodGroup">
+
+                        <option value="">Select blood group</option>
+
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Allergies</label>
+
+                    <input type="text" id="allergies" placeholder="Example: Dust, Milk, None">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Emergency Contact</label>
+
+                    <input type="tel" id="emergencyContact" placeholder="Enter emergency contact number">
+
+                </div>
+
+
+                <button type="button" class="save-button" onclick="saveHealthData()">
+                    Save Information
+                </button>
+
+            </div>
+
+
+            <!-- Health Summary -->
+
+            <div class="health-card">
+
+                <h2>📋 Health Summary</h2>
+
+                <p>
+                    <strong>Name:</strong>
+                    <span id="summaryName">Not saved</span>
+                </p>
+
+                <p>
+                    <strong>Age:</strong>
+                    <span id="summaryAge">Not saved</span>
+                </p>
+
+                <p>
+                    <strong>Blood Group:</strong>
+                    <span id="summaryBloodGroup">Not saved</span>
+                </p>
+
+                <p>
+                    <strong>Allergies:</strong>
+                    <span id="summaryAllergies">Not saved</span>
+                </p>
+
+                <p>
+                    <strong>Emergency Contact:</strong>
+                    <span id="summaryEmergency">Not saved</span>
+                </p>
+
+                <button type="button" class="save-button" onclick="enableHealthEdit()">
+                    ✏️ Edit Information
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>© 2026 MyHealthBox</p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

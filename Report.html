@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medical Reports - MyHealthBox</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <h2>🏥 MyHealthBox</h2>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="health.html">My Health</a>
+
+            <a href="Report.html">Reports</a>
+
+            <a href="#">Medicines</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+
+    <main>
+
+        <section class="reports-section">
+
+
+            <!-- Page Heading -->
+
+            <div class="reports-heading">
+
+                <h1>🧪 Medical Reports</h1>
+
+                <p>
+                    Keep your medical reports organized
+                    in one simple place.
+                </p>
+
+            </div>
+
+
+            <!-- Add Report -->
+
+            <div class="report-card">
+
+                <h2>➕ Add Medical Report</h2>
+
+
+                <div class="form-group">
+
+                    <label>Report Name</label>
+
+                    <input type="text" id="reportName" placeholder="Example: Blood Test">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Report Date</label>
+
+                    <input type="date" id="reportDate">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Hospital / Lab</label>
+
+                    <input type="text" id="hospitalName" placeholder="Enter hospital or lab name">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Notes</label>
+
+                    <textarea id="reportNotes" placeholder="Enter report notes"></textarea>
+
+                </div>
+
+
+                <!-- Add Report Button -->
+
+                <button class="save-button" onclick="addReport()">
+
+                    ➕ Add Report
+
+                </button>
+
+            </div>
+
+
+            <!-- My Reports -->
+
+            <div class="reports-list">
+
+                <h2>📋 My Reports</h2>
+
+
+                <div id="reportsContainer">
+
+                    <!-- Saved reports will appear here -->
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>© 2026 MyHealthBox</p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

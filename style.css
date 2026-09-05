@@ -1,0 +1,2269 @@
+/* ================================
+   MyHealthBox - Professional CSS
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f9fc;
+    color: #172b4d;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   HEADER
+   ================================ */
+
+header {
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e3edf4;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(12px);
+}
+
+header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #087f8c;
+}
+
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    position: relative;
+
+    text-decoration: none;
+    color: #526777;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 8px 0;
+
+    transition: 0.3s ease;
+}
+
+/* Navigation line */
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #087f8c;
+
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #087f8c;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ================================
+   MAIN
+   ================================ */
+
+main {
+    min-height: 80vh;
+}
+
+
+/* ================================
+   HERO SECTION
+   ================================ */
+
+.hero {
+    min-height: 480px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(circle at 20% 20%, #dff7f7 0, transparent 30%),
+        radial-gradient(circle at 80% 80%, #e8f4ff 0, transparent 30%),
+        #f8fcfe;
+}
+
+.hero h1 {
+    max-width: 750px;
+
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.1;
+
+    margin-bottom: 22px;
+
+    color: #123047;
+
+    letter-spacing: -1.5px;
+}
+
+.hero h1::first-line {
+    color: #087f8c;
+}
+
+.hero p {
+    max-width: 650px;
+
+    color: #657786;
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ================================
+   GET STARTED BUTTON
+   ================================ */
+
+button {
+    border: none;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    background: #087f8c;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(8, 127, 140, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 15px 30px rgba(8, 127, 140, 0.35);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* ================================
+   FEATURES
+   ================================ */
+
+.features {
+    max-width: 1150px;
+
+    margin: -40px auto 80px;
+
+    padding: 0 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    position: relative;
+}
+
+
+/* ================================
+   CARDS
+   ================================ */
+
+.card {
+    background: white;
+
+    padding: 30px 24px;
+
+    border-radius: 18px;
+
+    border: 1px solid #e5eef4;
+
+    box-shadow: 0 10px 30px rgba(24, 62, 82, 0.06);
+
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    border-color: #b9e3e5;
+
+    box-shadow: 0 18px 40px rgba(24, 62, 82, 0.12);
+}
+
+.card h3 {
+    font-size: 19px;
+
+    margin-bottom: 10px;
+
+    color: #123047;
+}
+
+.card p {
+    font-size: 14px;
+
+    color: #718391;
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #123047;
+
+    color: #b8c8d3;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE
+   ================================ */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    header h2 {
+        font-size: 22px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 430px;
+
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+
+        margin-top: -20px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+}
+/* ================================
+   MY HEALTH PAGE
+   ================================ */
+
+.health-section {
+    min-height: 75vh;
+
+    padding: 70px 20px 90px;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #e1f8f7,
+            transparent 30%
+        ),
+        #f7fbfd;
+}
+
+
+/* Heading */
+
+.health-heading {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.health-heading h1 {
+    font-size: 42px;
+
+    color: #123047;
+
+    margin-bottom: 10px;
+}
+
+.health-heading p {
+    color: #657786;
+
+    font-size: 17px;
+}
+
+
+/* Form Card */
+
+.health-card {
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border: 1px solid #e1edf2;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(24, 62, 82, 0.08);
+}
+
+
+/* Form */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #28485c;
+}
+
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d7e5eb;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    color: #234054;
+
+    background: #fbfdfe;
+
+    transition: 0.3s;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #087f8c;
+
+    box-shadow:
+        0 0 0 3px rgba(8, 127, 140, 0.10);
+
+    background: white;
+}
+
+
+/* Save Button */
+
+.save-button {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #087f8c;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.save-button:hover {
+    background: #066b76;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(8, 127, 140, 0.25);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .health-section {
+        padding: 50px 15px 70px;
+    }
+
+    .health-heading h1 {
+        font-size: 32px;
+    }
+
+    .health-heading p {
+        font-size: 15px;
+    }
+
+    .health-card {
+        padding: 25px 20px;
+    }
+}
+/* ================================
+   HEALTH SUMMARY
+   ================================ */
+
+.health-summary {
+    max-width: 650px;
+    margin: 25px auto 0;
+    padding: 30px 35px;
+
+    background: white;
+
+    border: 1px solid #e1edf2;
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(24, 62, 82, 0.08);
+}
+
+.health-summary h2 {
+    margin-bottom: 25px;
+
+    color: #123047;
+    font-size: 22px;
+}
+
+
+/* Summary Items */
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #edf2f5;
+}
+
+.summary-item span {
+    color: #657786;
+    font-size: 15px;
+}
+
+.summary-item strong {
+    color: #123047;
+    font-size: 15px;
+}
+
+
+/* Saved Status */
+
+.saved-status {
+    margin-top: 22px;
+    padding: 12px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    background: #edf9f7;
+    color: #087f8c;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .health-summary {
+        padding: 25px 20px;
+    }
+
+    .health-summary h2 {
+        font-size: 20px;
+    }
+
+    .summary-item span,
+    .summary-item strong {
+        font-size: 14px;
+    }
+}
+/* ================================
+   EDIT BUTTON
+   ================================ */
+
+.edit-button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 13px;
+
+    border: 1px solid #087f8c;
+    border-radius: 10px;
+
+    background: white;
+    color: #087f8c;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-button:hover {
+    background: #087f8c;
+    color: white;
+    transform: translateY(-2px);
+}
+/* ================================
+   MEDICAL REPORTS PAGE
+   ================================ */
+
+.reports-section {
+    min-height: 75vh;
+    padding: 70px 20px 90px;
+
+    background:
+        radial-gradient(circle at 80% 20%, #e1f8f7, transparent 30%),
+        #f7fbfd;
+}
+
+
+/* Page Heading */
+
+.reports-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.reports-heading h1 {
+    font-size: 42px;
+    color: #123047;
+    margin-bottom: 10px;
+}
+
+.reports-heading p {
+    color: #657786;
+    font-size: 17px;
+}
+
+
+/* Add Report Card */
+
+.report-card {
+    max-width: 650px;
+    margin: auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border: 1px solid #e1edf2;
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(24, 62, 82, 0.08);
+}
+
+.report-card h2 {
+    margin-bottom: 25px;
+
+    color: #123047;
+    font-size: 22px;
+}
+
+
+/* Textarea */
+
+.form-group textarea {
+    width: 100%;
+    min-height: 110px;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d7e5eb;
+    border-radius: 10px;
+
+    outline: none;
+
+    resize: vertical;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    color: #234054;
+
+    background: #fbfdfe;
+
+    transition: 0.3s;
+}
+
+.form-group textarea:focus {
+    border-color: #087f8c;
+
+    box-shadow:
+        0 0 0 3px rgba(8, 127, 140, 0.10);
+
+    background: white;
+}
+
+
+/* Reports List */
+
+.reports-list {
+    max-width: 650px;
+    margin: 35px auto 0;
+}
+
+.reports-list > h2 {
+    margin-bottom: 20px;
+
+    color: #123047;
+    font-size: 24px;
+}
+
+
+/* Individual Report */
+
+.report-item {
+    margin-bottom: 18px;
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #e1edf2;
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 30px rgba(24, 62, 82, 0.06);
+}
+
+.report-item h3 {
+    margin-bottom: 12px;
+
+    color: #123047;
+    font-size: 19px;
+}
+
+.report-info {
+    margin: 8px 0;
+
+    color: #657786;
+    font-size: 14px;
+}
+
+.report-notes {
+    margin-top: 15px;
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background: #f7fbfd;
+
+    color: #405766;
+
+    font-size: 14px;
+}
+
+
+/* Delete Button */
+
+.delete-report {
+    margin-top: 18px;
+
+    padding: 9px 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #fff0f0;
+    color: #d64545;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.delete-report:hover {
+    background: #d64545;
+    color: white;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .reports-section {
+        padding: 50px 15px 70px;
+    }
+
+    .reports-heading h1 {
+        font-size: 32px;
+    }
+
+    .reports-heading p {
+        font-size: 15px;
+    }
+
+    .report-card {
+        padding: 25px 20px;
+    }
+
+    .report-item {
+        padding: 20px;
+    }
+}
+/* ================================
+   MEDICINES PAGE
+   ================================ */
+
+.medicine-section {
+    min-height: 75vh;
+    padding: 70px 20px 90px;
+    background:
+        radial-gradient(circle at 80% 20%, #e1f8f7, transparent 30%),
+        #f7fbfd;
+}
+
+.medicine-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.medicine-heading h1 {
+    font-size: 42px;
+    color: #123047;
+    margin-bottom: 10px;
+}
+
+.medicine-heading p {
+    color: #657786;
+    font-size: 17px;
+}
+
+.medicine-card {
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+
+    background: white;
+
+    border: 1px solid #e1edf2;
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(24, 62, 82, 0.08);
+}
+
+.medicine-card h2 {
+    margin-bottom: 25px;
+
+    color: #123047;
+    font-size: 22px;
+}
+
+.medicine-card textarea {
+    width: 100%;
+    min-height: 100px;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d7e5eb;
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+
+    resize: vertical;
+}
+
+.medicine-card input:focus,
+.medicine-card select:focus,
+.medicine-card textarea:focus {
+    border-color: #087f8c;
+
+    box-shadow:
+        0 0 0 3px rgba(8, 127, 140, 0.10);
+
+    background: white;
+}
+
+
+/* ================================
+   MEDICINE LIST
+   ================================ */
+
+.medicines-list {
+    max-width: 650px;
+    margin: 30px auto 0;
+
+    padding: 30px 35px;
+
+    background: white;
+
+    border: 1px solid #e1edf2;
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(24, 62, 82, 0.08);
+}
+
+.medicines-list h2 {
+    margin-bottom: 25px;
+
+    color: #123047;
+    font-size: 22px;
+}
+
+
+/* ================================
+   MEDICINE ITEM
+   ================================ */
+
+.medicine-item {
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    background: #f8fcfd;
+
+    border: 1px solid #e1edf2;
+    border-radius: 14px;
+}
+
+.medicine-item h3 {
+    margin-bottom: 12px;
+
+    color: #123047;
+    font-size: 19px;
+}
+
+.medicine-info {
+    margin: 7px 0;
+
+    color: #657786;
+
+    font-size: 14px;
+}
+
+.delete-medicine {
+    margin-top: 12px;
+
+    padding: 9px 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #dc3545;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.delete-medicine:hover {
+    background: #b02a37;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   NO MEDICINES
+   ================================ */
+
+.no-medicines {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #657786;
+
+    font-size: 15px;
+}
+
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 600px) {
+
+    .medicine-section {
+        padding: 50px 15px 70px;
+    }
+
+    .medicine-heading h1 {
+        font-size: 32px;
+    }
+
+    .medicine-heading p {
+        font-size: 15px;
+    }
+
+    .medicine-card {
+        padding: 25px 20px;
+    }
+
+    .medicines-list {
+        padding: 25px 20px;
+    }
+
+}
+/* ================================
+   REMINDERS PAGE
+   ================================ */
+
+.reminder-section {
+    min-height: 75vh;
+    padding: 70px 20px 90px;
+    background:
+        radial-gradient(circle at 20% 20%, #e1f8f7, transparent 30%),
+        #f7fbfd;
+}
+
+.reminder-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.reminder-heading h1 {
+    font-size: 42px;
+    color: #123047;
+    margin-bottom: 10px;
+}
+
+.reminder-heading p {
+    color: #657786;
+    font-size: 17px;
+}
+
+.reminder-card {
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+
+    background: white;
+
+    border: 1px solid #e1edf2;
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(24, 62, 82, 0.08);
+}
+
+.reminder-card h2 {
+    margin-bottom: 25px;
+    color: #123047;
+    font-size: 22px;
+}
+
+
+/* ================================
+   REMINDERS LIST
+   ================================ */
+
+.reminders-list {
+    max-width: 650px;
+    margin: 30px auto 0;
+
+    padding: 30px 35px;
+
+    background: white;
+
+    border: 1px solid #e1edf2;
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(24, 62, 82, 0.08);
+}
+
+.reminders-list h2 {
+    margin-bottom: 25px;
+
+    color: #123047;
+    font-size: 22px;
+}
+
+
+/* ================================
+   REMINDER ITEM
+   ================================ */
+
+.reminder-item {
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    background: #f8fcfd;
+
+    border: 1px solid #e1edf2;
+    border-radius: 14px;
+}
+
+.reminder-item h3 {
+    margin-bottom: 12px;
+
+    color: #123047;
+    font-size: 19px;
+}
+
+.reminder-info {
+    margin: 7px 0;
+
+    color: #657786;
+
+    font-size: 14px;
+}
+
+.delete-reminder {
+    margin-top: 12px;
+
+    padding: 9px 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #dc3545;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.delete-reminder:hover {
+    background: #b02a37;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   NO REMINDERS
+   ================================ */
+
+.no-reminders {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #657786;
+
+    font-size: 15px;
+}
+
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 600px) {
+
+    .reminder-section {
+        padding: 50px 15px 70px;
+    }
+
+    .reminder-heading h1 {
+        font-size: 32px;
+    }
+
+    .reminder-heading p {
+        font-size: 15px;
+    }
+
+    .reminder-card {
+        padding: 25px 20px;
+    }
+
+    .reminders-list {
+        padding: 25px 20px;
+    }
+
+}
+/* ================================
+   HOME DASHBOARD
+   ================================ */
+
+.dashboard-section {
+    padding: 60px 20px;
+
+    background: #ffffff;
+}
+
+.dashboard-heading {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.dashboard-heading h2 {
+    font-size: 30px;
+
+    color: #123047;
+
+    margin-bottom: 8px;
+}
+
+.dashboard-heading p {
+    color: #657786;
+
+    font-size: 15px;
+}
+
+
+/* ================================
+   DASHBOARD CARDS
+   ================================ */
+
+.dashboard-cards {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.dashboard-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 22px;
+
+    background: #f8fcfd;
+
+    border: 1px solid #e1edf2;
+
+    border-radius: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(24, 62, 82, 0.10);
+
+    border-color: #087f8c;
+}
+
+
+.dashboard-icon {
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e8f7f7;
+
+    border-radius: 12px;
+
+    font-size: 25px;
+}
+
+
+.dashboard-card h3 {
+    margin-bottom: 5px;
+
+    color: #123047;
+
+    font-size: 16px;
+}
+
+
+.dashboard-card strong {
+    color: #087f8c;
+
+    font-size: 20px;
+}
+
+
+.dashboard-card span {
+    color: #657786;
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   DASHBOARD MOBILE
+   ================================ */
+
+@media (max-width: 850px) {
+
+    .dashboard-cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard-section {
+        padding: 45px 15px;
+    }
+
+    .dashboard-heading h2 {
+        font-size: 25px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ================================
+   UPCOMING REMINDERS
+   ================================ */
+
+.upcoming-reminders {
+
+    max-width: 1000px;
+
+    margin: 30px auto 0;
+
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #e1edf2;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(24, 62, 82, 0.08);
+}
+
+
+.upcoming-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.upcoming-heading h2 {
+
+    margin: 0;
+
+    color: #123047;
+
+    font-size: 22px;
+}
+
+
+.upcoming-heading a {
+
+    color: #087f8c;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.upcoming-heading a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* ================================
+   UPCOMING REMINDER ITEM
+   ================================ */
+
+.upcoming-reminder-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px;
+
+    margin-bottom: 12px;
+
+    background: #f8fcfd;
+
+    border: 1px solid #e1edf2;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+
+.upcoming-reminder-item:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #087f8c;
+}
+
+
+.upcoming-reminder-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.upcoming-reminder-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e8f7f7;
+
+    border-radius: 10px;
+
+    font-size: 22px;
+}
+
+
+.upcoming-reminder-item h3 {
+
+    margin: 0 0 5px;
+
+    color: #123047;
+
+    font-size: 16px;
+}
+
+
+.upcoming-reminder-item p {
+
+    margin: 0;
+
+    color: #657786;
+
+    font-size: 13px;
+}
+
+
+.upcoming-reminder-time {
+
+    color: #087f8c;
+
+    font-weight: 600;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   NO UPCOMING REMINDERS
+   ================================ */
+
+.no-upcoming-reminders {
+
+    text-align: center;
+
+    padding: 20px;
+
+    color: #657786;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 600px) {
+
+    .upcoming-reminders {
+
+        padding: 22px 18px;
+
+    }
+
+
+    .upcoming-heading h2 {
+
+        font-size: 19px;
+
+    }
+
+
+    .upcoming-reminder-item {
+
+        align-items: flex-start;
+
+    }
+
+
+    .upcoming-reminder-time {
+
+        font-size: 12px;
+
+        white-space: nowrap;
+
+    }
+
+}
+/* =================================
+   MEDICINE & REMINDER PAGE
+   ================================= */
+
+.page-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+
+/* =================================
+   PAGE HEADING
+   ================================= */
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.page-heading h1 {
+    margin: 0 0 10px;
+    color: #123047;
+    font-size: 38px;
+}
+
+.page-heading p {
+    margin: 0;
+    color: #657786;
+    font-size: 16px;
+}
+
+
+/* =================================
+   FORM CARD
+   ================================= */
+
+.form-card {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e1edf2;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(24, 62, 82, 0.08);
+}
+
+.form-card h2 {
+    margin: 0 0 25px;
+    color: #123047;
+    text-align: center;
+}
+
+
+/* =================================
+   FORM
+   ================================= */
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-card label {
+    color: #123047;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #cddfe5;
+    border-radius: 9px;
+    font-size: 14px;
+    outline: none;
+    background: #ffffff;
+}
+
+.form-card input:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+    border-color: #087f8c;
+    box-shadow: 0 0 0 3px rgba(8, 127, 140, 0.10);
+}
+
+
+/* =================================
+   FORM BUTTON
+   ================================= */
+
+.form-card button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #087f8c;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-card button:hover {
+    background: #066d78;
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   LIST SECTION
+   ================================= */
+
+.list-section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.list-section h2 {
+    margin-bottom: 20px;
+    color: #123047;
+    font-size: 25px;
+}
+
+
+/* =================================
+   MEDICINE / REMINDER ITEMS
+   ================================= */
+
+.medicine-item,
+.reminder-item,
+.report-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    padding: 22px;
+    margin-bottom: 15px;
+
+    background: #ffffff;
+    border: 1px solid #e1edf2;
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(24, 62, 82, 0.06);
+
+    transition: 0.3s;
+}
+
+.medicine-item:hover,
+.reminder-item:hover,
+.report-item:hover {
+    transform: translateY(-3px);
+    border-color: #087f8c;
+}
+
+
+/* =================================
+   ITEM INFORMATION
+   ================================= */
+
+.medicine-info,
+.reminder-info,
+.report-info {
+    flex: 1;
+}
+
+.medicine-info h3,
+.reminder-info h3,
+.report-info h3 {
+    margin: 0 0 10px;
+    color: #123047;
+    font-size: 18px;
+}
+
+.medicine-info p,
+.reminder-info p,
+.report-info p {
+    margin: 6px 0;
+    color: #657786;
+    font-size: 14px;
+}
+
+
+/* =================================
+   ACTION BUTTONS
+   ================================= */
+
+.medicine-actions,
+.reminder-actions,
+.report-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+    padding: 9px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #e8f7f7;
+    color: #087f8c;
+}
+
+.edit-btn:hover {
+    background: #087f8c;
+    color: white;
+}
+
+.delete-btn {
+    background: #ffecec;
+    color: #d64545;
+}
+
+.delete-btn:hover {
+    background: #d64545;
+    color: white;
+}
+
+
+/* =================================
+   NO DATA
+   ================================= */
+
+.no-data {
+    text-align: center;
+    padding: 30px;
+    color: #657786;
+    background: #ffffff;
+    border: 1px solid #e1edf2;
+    border-radius: 12px;
+}
+
+
+/* =================================
+   MOBILE
+   ================================= */
+
+@media (max-width: 700px) {
+
+    .page-section {
+        padding: 35px 15px;
+    }
+
+    .page-heading h1 {
+        font-size: 30px;
+    }
+
+    .form-card {
+        padding: 22px;
+    }
+
+    .medicine-item,
+    .reminder-item,
+    .report-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .medicine-actions,
+    .reminder-actions,
+    .report-actions {
+        width: 100%;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        flex: 1;
+    }
+}
+/* =========================================
+   MYHEALTHBOX - FINAL UI POLISH
+   ========================================= */
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    margin: 0;
+    background: #f7fbfd;
+    color: #123047;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+    min-height: 70px;
+
+    padding: 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e1edf2;
+
+    box-sizing: border-box;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+header h2 {
+    margin: 0;
+
+    color: #123047;
+
+    font-size: 23px;
+}
+
+
+header nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+header nav a {
+    padding: 10px 13px;
+
+    color: #123047;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+
+header nav a:hover {
+    color: #087f8c;
+
+    background: #e8f7f7;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    min-height: 430px;
+
+    padding: 70px 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eefafa,
+            #f7fbfd
+        );
+}
+
+
+.hero h1 {
+    margin: 0 0 18px;
+
+    max-width: 750px;
+
+    color: #123047;
+
+    font-size: 48px;
+
+    line-height: 1.15;
+}
+
+
+.hero p {
+    max-width: 650px;
+
+    margin: 0 0 28px;
+
+    color: #657786;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+.hero button {
+    border: none;
+
+    padding: 14px 28px;
+
+    border-radius: 10px;
+
+    background: #087f8c;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(8, 127, 140, 0.20);
+
+    transition: 0.3s;
+}
+
+
+.hero button:hover {
+    background: #066d78;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(8, 127, 140, 0.25);
+}
+
+
+/* =========================================
+   DASHBOARD
+   ========================================= */
+
+.dashboard-section {
+    background: #f7fbfd;
+}
+
+
+.dashboard-card {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+.dashboard-card h3 {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   PAGE SECTIONS
+   ========================================= */
+
+.page-section {
+    min-height: calc(100vh - 150px);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   FORM CARD
+   ========================================= */
+
+.form-card {
+    background: #ffffff;
+
+    border: 1px solid #e1edf2;
+
+    box-shadow:
+        0 15px 40px
+        rgba(24, 62, 82, 0.07);
+}
+
+
+.form-card h2 {
+    font-size: 24px;
+}
+
+
+.form-card input,
+.form-card select,
+.form-card textarea {
+    font-family: inherit;
+
+    transition: 0.2s;
+}
+
+
+.form-card input:hover,
+.form-card select:hover,
+.form-card textarea:hover {
+    border-color: #9bc8ce;
+}
+
+
+/* =========================================
+   LIST SECTION
+   ========================================= */
+
+.list-section {
+    padding-bottom: 50px;
+}
+
+
+.list-section h2 {
+    font-size: 25px;
+}
+
+
+/* =========================================
+   ITEM CARDS
+   ========================================= */
+
+.medicine-item,
+.reminder-item,
+.report-item {
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 25px
+        rgba(24, 62, 82, 0.05);
+}
+
+
+.medicine-item:hover,
+.reminder-item:hover,
+.report-item:hover {
+    box-shadow:
+        0 15px 35px
+        rgba(24, 62, 82, 0.09);
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.edit-btn,
+.delete-btn {
+    min-width: 85px;
+}
+
+
+.edit-btn:active,
+.delete-btn:active,
+.form-card button:active,
+.hero button:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    padding: 25px 20px;
+
+    text-align: center;
+
+    background: #123047;
+
+    color: #dce9ee;
+}
+
+
+footer p {
+    margin: 0;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================
+   MOBILE HEADER
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    header nav {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 4px;
+    }
+
+
+    header nav a {
+        font-size: 13px;
+
+        padding: 8px 10px;
+    }
+
+
+    .hero {
+        min-height: 400px;
+
+        padding: 55px 20px;
+    }
+
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    header h2 {
+        font-size: 20px;
+    }
+
+
+    header nav {
+        gap: 2px;
+    }
+
+
+    header nav a {
+        font-size: 12px;
+
+        padding: 7px 8px;
+    }
+
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+
+    .hero p {
+        font-size: 15px;
+    }
+
+
+    .hero button {
+        width: 100%;
+
+        max-width: 220px;
+    }
+
+
+    .page-heading h1 {
+        font-size: 30px;
+    }
+
+
+    .form-card {
+        padding: 20px;
+    }
+
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medicines - MyHealthBox</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h2>🏥 MyHealthBox</h2>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="health.html">My Health</a>
+
+            <a href="Report.html">Reports</a>
+
+            <a href="medicine.html">Medicines</a>
+
+            <a href="reminder.html">Reminders</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main>
+
+        <section class="page-section">
+
+            <div class="page-heading">
+
+                <h1>💊 My Medicines</h1>
+
+                <p>
+                    Keep track of your medicines and dosage.
+                </p>
+
+            </div>
+
+
+
+            <!-- MEDICINE FORM -->
+
+            <div class="form-card">
+
+                <h2>Add Medicine</h2>
+
+
+                <form id="medicineForm">
+
+
+                    <label for="medicineName">
+                        Medicine Name
+                    </label>
+
+                    <input type="text" id="medicineName" placeholder="Example: Paracetamol">
+
+
+
+                    <label for="dosage">
+                        Dosage
+                    </label>
+
+                    <input type="text" id="dosage" placeholder="Example: 500 mg">
+
+
+
+                    <label for="medicineTime">
+                        When to Take
+                    </label>
+
+                    <input type="time" id="medicineTime">
+
+
+
+                    <label for="startDate">
+                        Start Date
+                    </label>
+
+                    <input type="date" id="startDate">
+
+
+
+                    <label for="endDate">
+                        End Date
+                    </label>
+
+                    <input type="date" id="endDate">
+
+
+
+                    <button type="button" id="medicineSubmitBtn" onclick="handleMedicineSubmit()">
+                        Add Medicine
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- MEDICINE LIST -->
+
+            <div class="list-section">
+
+                <h2>💊 Your Medicines</h2>
+
+
+                <div id="medicinesContainer">
+
+                    <p class="no-data">
+                        No medicines added yet.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 MyHealthBox
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
